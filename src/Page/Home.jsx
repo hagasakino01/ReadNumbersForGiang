@@ -12,7 +12,7 @@ function Home() {
   const defaultNumbers =' hai ba bốn năm sáu bảy tám chín';
 
   const chuHangDonVi = ('1 một' + defaultNumbers).split(' ');
-  const chuHangChuc = ('lẻ mười' + defaultNumbers).split(' ');
+  const chuHangChuc = ('linh mười' + defaultNumbers).split(' ');
   const chuHangTram = ('không một' + defaultNumbers).split(' ');
 
   const convert_block_three=(number)=> {
@@ -43,7 +43,10 @@ function Home() {
     if (number[0] > 0 && number[1] == 5) {
       dv = 'lăm'
     }
-
+    // Nếu chữ số hàng đơn vị là 4
+    if (number[0] > 1 && number[1] == 4) {
+      dv = 'tư'
+    }
     // Nếu số hàng chục lớn hơn 1
     if (number[0] > 1) {
       append = ' mươi';
