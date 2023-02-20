@@ -110,7 +110,8 @@ function Home() {
   
 
   const AddValue=()=>{
-    const kq=to_vietnamese(input.number)
+    const kqSimple=to_vietnamese(input.number)
+    const kq=kqSimple.charAt(0).toUpperCase() + kqSimple.slice(1);
     const text=input?.number || ''
     if(text.length >= 15){
         setOutput('Số to quá b khum đọc đc huhu !!😭😭') 
@@ -224,7 +225,7 @@ function Home() {
         name="number" value={input.number || ''} onChange={handleChange} 
       />
       <div className='mt-[20px]'>
-        <p className='text-[20px]'>{output}</p>
+        <p className='text-[24px]'>{output}</p>
       </div>
       {/* <Test /> */}
     </div>
